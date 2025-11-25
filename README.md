@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Philippine Artistry Art Gallery</title>
     <style>
+
         * {
             box-sizing: border-box;
             margin: 0;
@@ -94,6 +95,7 @@
             font-size: 2rem;
             margin-bottom: 25px;
             color: #4e342e;
+
         }
 
         .input-group {
