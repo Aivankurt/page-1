@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Philippine Artistry Art Gallery Welcome</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <title>Philippine Artistry Art Gallery</title>
     <style>
+        /* --- Reset & Base Styles --- */
         * {
             box-sizing: border-box;
             margin: 0;
@@ -13,8 +13,8 @@
         }
 
         body {
-            font-family: 'Open Sans', sans-serif;
-          
+            /* Using system fonts that look like the original design without needing external links */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #f4eccf; 
             background-image: linear-gradient(to bottom, rgba(255,255,255,0.5), rgba(255,255,255,0.2)), url('https://www.transparenttextures.com/patterns/cream-paper.png');
             color: #3e2723; 
@@ -23,11 +23,12 @@
             flex-direction: column;
         }
 
+        /* --- Navigation Bar (Restored) --- */
         .top-nav {
-        
             background-color: #5d4037;
             padding: 15px 0;
             box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            width: 100%;
         }
 
         .nav-links {
@@ -41,7 +42,7 @@
             text-decoration: none;
             color: #efebe9;
             font-weight: 600;
-            font-family: 'Lora', serif;
+            font-family: Georgia, 'Times New Roman', serif; /* Matches the "Lora" look */
             transition: color 0.3s ease;
         }
 
@@ -49,6 +50,7 @@
             color: #ffcc80; 
         }
 
+        /* --- Layout Containers --- */
         .main-container {
             flex: 1;
             display: flex;
@@ -57,45 +59,43 @@
             justify-content: center;
             padding: 40px 20px;
             text-align: center;
-            max-width: 600px;
+            width: 100%;
+            max-width: 500px;
             margin: auto;
         }
 
-        .header-section {
-            margin-bottom: 40px;
-        }
-
+        /* --- Typography --- */
         h1.welcome-title {
-            font-family: 'Lora', serif;
+            font-family: Georgia, 'Times New Roman', serif;
             font-size: 3.5rem;
             font-weight: 700;
-            color: #3e2723;
             margin-bottom: 10px;
             text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
         }
 
         h2.gallery-name {
-            font-family: 'Lora', serif;
-            font-size: 1.5rem;
-            font-weight: 400;
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 1.4rem;
             font-style: italic;
             color: #6d4c41;
+            margin-bottom: 40px;
         }
 
+        h3.login-heading {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 2rem;
+            margin-bottom: 25px;
+            color: #4e342e;
+        }
+
+        /* --- Login Card --- */
         .login-section {
-            background-color: rgba(255, 255, 255, 0.8);
-            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.85);
+            padding: 40px 30px;
             border-radius: 15px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             width: 100%;
             border: 1px solid #d7ccc8;
-        }
-
-        h3.login-heading {
-            font-family: 'Lora', serif;
-            font-size: 2rem;
-            margin-bottom: 25px;
-            color: #4e342e;
         }
 
         .input-group {
@@ -110,7 +110,7 @@
             border-radius: 8px;
             background-color: #fafafa;
             outline: none;
-            font-family: 'Open Sans', sans-serif;
+            transition: border-color 0.3s;
         }
 
         .input-field:focus {
@@ -128,7 +128,7 @@
             border-radius: 8px;
             cursor: pointer;
             transition: background-color 0.3s;
-            font-family: 'Lora', serif;
+            font-family: Georgia, 'Times New Roman', serif;
         }
 
         .login-button:hover {
@@ -141,16 +141,7 @@
             color: #6d4c41;
         }
 
-        .signup-link {
-            color: #bf360c;
-            font-weight: bold;
-            text-decoration: none;
-        }
-
-        .signup-link:hover {
-            text-decoration: underline;
-        }
-
+        /* --- Footer --- */
         .footer-section {
             margin-top: auto;
             padding: 30px 20px;
@@ -161,15 +152,11 @@
         }
 
         .quote {
-            font-family: 'Lora', serif;
+            font-family: Georgia, 'Times New Roman', serif;
             font-style: italic;
             font-size: 1.1rem;
             margin-bottom: 15px;
             display: block;
-        }
-        
-        .contact-info p {
-            margin: 5px 0;
         }
     </style>
 </head>
@@ -185,7 +172,7 @@
 
     <main class="main-container">
         
-        <header class="header-section">
+        <header>
             <h1 class="welcome-title">Welcome!</h1>
             <h2 class="gallery-name">Philippine Artistry Art Gallery</h2>
         </header>
@@ -204,18 +191,17 @@
             </form>
 
             <div class="signup-area">
-                <p>or</p>
-                <p>Sign-up here <a href="#signup" class="signup-link">click me</a></p>
+                <p>or Sign-up via Admin</p>
             </div>
         </section>
 
     </main>
 
     <footer class="footer-section">
-        <span class="quote">"Art isn't all about etc....."</span>
+        <span class="quote">"Art isn't all about the details but on how you show your imagination"</span>
         <div class="contact-info">
-            <p>or you can contact us via email or phone number:</p>
-            <p>contact@philippineartistry.com or 09989980979</p>
+            <p>Contact us:</p>
+            <p>contact@philippineartistry.com | 09989980979</p>
         </div>
     </footer>
 
