@@ -12,7 +12,6 @@
         }
 
         body {
-  
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #f4eccf; 
             background-image: linear-gradient(to bottom, rgba(255,255,255,0.5), rgba(255,255,255,0.2));
@@ -22,11 +21,8 @@
             flex-direction: column;
         }
 
-        .serif-font { font-family: Georgia, 'Times New Roman', serif; }
-        .sans-font { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-
         .top-nav {
-            background-color: #5d4037; 
+            background-color: #5d4037;
             padding: 15px 0;
             box-shadow: 0 2px 5px rgba(0,0,0,0.2);
             width: 100%;
@@ -188,7 +184,7 @@
         </header>
 
         <section class="login-card">
-            <h3 class="login-heading">Log-in</h3>
+            <h3 class="login-heading">Log-in</h3> 
             
             <form action="#" method="post">
                 <div class="input-group">
