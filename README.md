@@ -13,43 +13,44 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4eccf; 
-            background-image: linear-gradient(to bottom, rgba(255,255,255,0.5), rgba(255,255,255,0.2));
-            color: #3e2723;
+            font-family: Arial, sans-serif;
+            color: #3e2723; 
             min-height: 100vh;
             display: flex;
             flex-direction: column;
+
+            background: 
+                linear-gradient(rgba(244, 236, 207, 0.8), rgba(244, 236, 207, 0.8)), /* Light semi-transparent overlay */
+                url('https://cdn.luxatic.com/wp-content/uploads/2019/02/Vincent-van-Gogh.jpg') no-repeat center center fixed; 
+            background-size: cover; 
         }
 
-        .top-nav {
-            background-color: #5d4037;
+        .nav {
+            background-color: #5d4037; 
             padding: 15px 0;
             box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-            width: 100%;
         }
 
-        .nav-links {
+        .nav-list {
             list-style: none;
             display: flex;
             justify-content: center;
             gap: 40px;
         }
 
-        .nav-links a {
+        .nav-link {
             text-decoration: none;
-            color: #efebe9;
+            color: #efebe9; 
             font-weight: bold;
-            font-family: Georgia, 'Times New Roman', serif;
             font-size: 1.1rem;
             transition: color 0.3s ease;
         }
 
-        .nav-links a:hover {
+        .nav-link:hover {
             color: #ffcc80;
         }
 
-        .main-container {
+        .main-content {
             flex: 1;
             display: flex;
             flex-direction: column;
@@ -57,62 +58,55 @@
             justify-content: center;
             padding: 20px;
             text-align: center;
-            width: 100%;
         }
 
-        .header-section {
+        .header {
             margin-bottom: 30px;
         }
 
-        h1.welcome-title {
-            font-family: Georgia, 'Times New Roman', serif;
+        .header-title {
             font-size: 3.5rem;
             font-weight: 700;
             margin-bottom: 5px;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+            text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.5);
         }
 
-        h2.gallery-name {
-            font-family: Georgia, 'Times New Roman', serif;
+        .header-subtitle {
             font-size: 1.5rem;
             font-style: italic;
-            color: #6d4c41;
+            color: #6d4c41; 
             font-weight: normal;
         }
 
         .login-card {
-            background-color: #fff;
+            background-color: rgba(255, 255, 255, 0.95); /* Slightly transparent white for backdrop */
             padding: 40px 30px;
             border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
             width: 100%;
             max-width: 400px;
-            border: 1px solid #d7ccc8;
         }
 
-        h3.login-heading {
-            font-family: Georgia, 'Times New Roman', serif;
+        .login-heading {
             font-size: 2rem;
             margin-bottom: 25px;
             color: #4e342e;
-
         }
 
-        .input-group {
+        .form-group {
             margin-bottom: 15px;
         }
 
-        .input-field {
+        .form-input {
             width: 100%;
             padding: 12px 15px;
             font-size: 1rem;
             border: 2px solid #a1887f;
             border-radius: 6px;
             outline: none;
-            color: #555;
         }
 
-        .input-field:focus {
+        .form-input:focus {
             border-color: #5d4037;
         }
 
@@ -127,7 +121,8 @@
             border: none;
             border-radius: 6px;
             cursor: pointer;
-            font-family: Georgia, 'Times New Roman', serif;
+            text-decoration: none; 
+            display: block; 
             transition: background-color 0.3s;
         }
 
@@ -151,16 +146,39 @@
             text-decoration: underline;
         }
 
-        .footer-section {
+        .alert-message {
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            font-weight: bold;
+            text-align: center;
+            display: none; 
+        }
+
+        .alert-error {
+            background-color: #ffebee;
+            color: #F44336;
+            border: 1px solid #F44336;
+        }
+
+        #login-trigger {
+            display: none;
+        }
+        
+        #login-trigger:checked ~ .alert-message {
+            display: block;
+        }
+
+        .footer {
             margin-top: auto;
             padding: 20px;
             text-align: center;
             font-size: 0.9rem;
             color: #5d4037;
+            background-color: rgba(244, 236, 207, 0.7); /* Added background for readability */
         }
 
-        .quote {
-            font-family: Georgia, 'Times New Roman', serif;
+        .footer-quote {
             font-style: italic;
             font-size: 1.1rem;
             margin-bottom: 10px;
@@ -170,47 +188,55 @@
 </head>
 <body>
 
-    <nav class="top-nav">
-        <div class="nav-links">
-            <a href="#home">Home</a>
-            <a href="#tutorials">Tutorials</a>
-            <a href="#artists">Artists & History</a>
-        </div>
+    <nav class="nav">
+    <ul class="nav-list">
+    <li><a href="#home" class="nav-link">Home</a></li>
+    <li><a href="#tutorials" class="nav-link">Tutorials</a></li>
+    <li><a href="#artists" class="nav-link">Artists & History</a></li>
+    </ul>
     </nav>
 
-    <main class="main-container">
+    <main class="main-content">
         
-        <header class="header-section">
-            <h1 class="welcome-title">Welcome!</h1>
-            <h2 class="gallery-name">Philippine Artistry Art Gallery</h2>
+        <header class="header">
+            <h1 class="header-title">Welcome!</h1>
+            <h2 class="header-subtitle">Philippine Artistry Art Gallery</h2>
         </header>
 
         <section class="login-card">
-            <h3 class="login-heading">Log-in</h3> 
+        <h3 class="login-heading">Log-in</h3>
             
-            <form action="#" method="post">
-                <div class="input-group">
-                    <input type="text" name="username" class="input-field" placeholder="Username" required>
-                </div>
-                <div class="input-group">
-                    <input type="password" name="password" class="input-field" placeholder="Password" required>
-                </div>
-                <button type="submit" class="login-button">Log In</button>
-            </form>
+        <input type="radio" id="login-trigger" name="login-state" hidden>
 
-            <div class="signup-text">
-                <p>or</p>
-                <p>Sign-up here <a href="#signup" class="signup-link">click me</a></p>
-            </div>
+        <div class="alert-message alert-error">
+        Mock Error: Invalid login attempt. (Click the "Log In" button again to try again.)
+        </div>
+
+        <form action="#" method="post">
+        <div class="form-group">
+        <input type="text" id="username" name="username" class="form-input" placeholder="Username" required>
+        </div>
+
+        <div class="form-group">
+        <input type="password" id="password" name="password" class="form-input" placeholder="Password" required>
+        </div>
+                
+        <label for="login-trigger" class="login-button">Log In</label>
+        </form>
+
+        <div class="signup-text">
+        <p>or</p>
+        <p>Sign-up here <a href="#signup" class="signup-link">click me</a></p>
+        </div>
         </section>
 
     </main>
 
-    <footer class="footer-section">
-        <span class="quote">"Art isn't all about the details but on how you show your imagination"</span>
-        <div class="contact-info">
-            <p>contact@philippineartistry.com | 09989980979</p>
-        </div>
+    <footer class="footer">
+    <span class="footer-quote">"Art isn't all about the details but on how you show your imagination"</span>
+    <div class="contact-info">
+    <p>contact@philippineartistry.com | 09989980979</p>
+    </div>
     </footer>
 
 </body>
