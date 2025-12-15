@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Philippine Artistry Art Gallery</title>
     <style>
-
+        
         * {
             box-sizing: border-box;
             margin: 0;
@@ -20,9 +20,10 @@
             flex-direction: column;
 
             background: 
-                linear-gradient(rgba(244, 236, 207, 0.8), rgba(244, 236, 207, 0.8)), 
-                url('https://cdn.luxatic.com/wp-content/uploads/2019/02/Vincent-van-Gogh.jpg') no-repeat center center fixed; 
+            linear-gradient(rgba(244, 236, 207, 0.8), rgba(244, 236, 207, 0.8)), 
+            url('https://cdn.luxatic.com/wp-content/uploads/2019/02/Vincent-van-Gogh.jpg') no-repeat center center fixed; 
             background-size: cover; 
+
         }
 
         .nav {
@@ -47,7 +48,7 @@
         }
 
         .nav-link:hover {
-            color: #ffcc80; 
+            color: #ffcc80;
         }
 
         .main-content {
@@ -164,7 +165,7 @@
         #login-trigger {
             display: none;
         }
-     
+        
         #login-trigger:checked ~ .alert-message {
             display: block;
         }
@@ -175,7 +176,7 @@
             text-align: center;
             font-size: 0.9rem;
             color: #5d4037;
-            background-color: rgba(244, 236, 207, 0.7); 
+            background-color: rgba(244, 236, 207, 0.7); /* Added background for readability */
         }
 
         .footer-quote {
@@ -189,53 +190,53 @@
 <body>
 
     <nav class="nav">
-        <ul class="nav-list">
-            <li><a href="#home" class="nav-link">Home</a></li>
-            <li><a href="#tutorials" class="nav-link">Tutorials</a></li>
-            <li><a href="#artists" class="nav-link">Artists & History</a></li>
-        </ul>
+    <ul class="nav-list">
+    <li><a href="#home" class="nav-link">Home</a></li>
+    <li><a href="#tutorials" class="nav-link">Tutorials</a></li>
+    <li><a href="#artists" class="nav-link">Artists & History</a></li>
+    </ul>
     </nav>
 
     <main class="main-content">
         
-        <header class="header">
-            <h1 class="header-title">Welcome!</h1>
-            <h2 class="header-subtitle">Philippine Artistry Art Gallery</h2>
-        </header>
+    <header class="header">
+    <h1 class="header-title">Welcome!</h1>
+    <h2 class="header-subtitle">Philippine Artistry Art Gallery</h2>
+    </header>
 
-        <section class="login-card">
-            <h3 class="login-heading">Log-in</h3>
+    <section class="login-card">
+    <h3 class="login-heading">Log-in</h3>
             
-            <input type="radio" id="login-trigger" name="login-state" hidden>
+    <input type="radio" id="login-trigger" name="login-state" style="display: none;">
 
-            <div class="alert-message alert-error">
-                Mock Error: Invalid login attempt. (Click the "Log In" button again to try again.)
-            </div>
+    <div class="alert-message alert-error">
+    Mock Error: Invalid login attempt. (Click the "Log In" button again to try again.)
+    </div>
 
-            <form action="#" method="post">
-                <div class="form-group">
-                    <input type="text" id="username" name="username" class="form-input" placeholder="Username" required>
-                </div>
-                <div class="form-group">
-                    <input type="password" id="password" name="password" class="form-input" placeholder="Password" required>
-                </div>
+    <form action="#" method="post">
+    <div class="form-group">
+    <input type="text" id="username" name="username" class="form-input" placeholder="Username" required>
+    </div>
+    <div class="form-group">
+    <input type="password" id="password" name="password" class="form-input" placeholder="Password" required>
+    </div>
                 
-                <label for="login-trigger" class="login-button">Log In</label>
-            </form>
+    <label for="login-trigger" class="login-button">Log In</label>
+    </form>
 
-            <div class="signup-text">
-                <p>or</p>
-                <p>Sign-up here <a href="#signup" class="signup-link">click me</a></p>
-            </div>
-        </section>
+    <div class="signup-text">
+    <p>or</p>
+    <p>Sign-up here <a href="#signup" class="signup-link">click me</a></p>
+    </div>
+    </section>
 
     </main>
 
     <footer class="footer">
-        <span class="footer-quote">"Art isn't all about the details but on how you show your imagination"</span>
-        <div class="contact-info">
-            <p>contact@philippineartistry.com | 09989980979</p>
-        </div>
+    <span class="footer-quote">"Art isn't all about the details but on how you show your imagination"</span>
+    <div class="contact-info">
+    <p>contact@philippineartistry.com | 09989980979</p>
+    </div>
     </footer>
 
 </body>
