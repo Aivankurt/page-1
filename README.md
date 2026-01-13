@@ -162,12 +162,10 @@
             border: 1px solid #F44336;
         }
 
-        #login-trigger {
-            display: none;
-        }
-        
-        #login-trigger:checked ~ .alert-message {
-            display: block;
+        .alert-success {
+            background-color: #e8f5e8;
+            color: #4CAF50;
+            border: 1px solid #4CAF50;
         }
 
         .footer {
@@ -207,10 +205,8 @@
     <section class="login-card">
     <h3 class="login-heading">Log-in</h3>
             
-    <input type="radio" id="login-trigger" name="login-state" style="display: none;">
-
     <div class="alert-message alert-error">
-    Mock Error: Invalid login attempt. (Click the "Log In" button again to try again.)
+    Invalid username or password.
     </div>
 
     <form action="#" method="post">
@@ -221,7 +217,7 @@
     <input type="password" id="password" name="password" class="form-input" placeholder="Password" required>
     </div>
                 
-    <label for="login-trigger" class="login-button">Log In</label>
+    <button type="submit" class="login-button">Log In</button>
     </form>
 
     <div class="signup-text">
@@ -238,6 +234,32 @@
     <p>contact@philippineartistry.com | 09989980979</p>
     </div>
     </footer>
+
+    <script>
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const alertDiv = document.querySelector('.alert-message');
+            
+            // Mock authentication: hardcoded credentials for demo
+            if (username === 'admin' && password === 'password') {
+                alertDiv.className = 'alert-message alert-success';
+                alertDiv.textContent = 'Login successful! Redirecting...';
+                alertDiv.style.display = 'block';
+                // Simulate redirect after 1 second (in a real app, this would be a proper redirect)
+                setTimeout(() => {
+                    alertDiv.style.display = 'none';
+                    // For demo, just scroll to top or show a message; replace with actual redirect
+                    alert('Welcome to the gallery!');
+                }, 1000);
+            } else {
+                alertDiv.className = 'alert-message alert-error';
+                alertDiv.textContent = 'Invalid username or password.';
+                alertDiv.style.display = 'block';
+            }
+        });
+    </script>
 
 </body>
 </html>
