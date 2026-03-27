@@ -15,11 +15,13 @@ body {
     z-index: -1;
 }
 
+/* NAVBAR */
 .navbar { display: flex; justify-content: space-between; padding: 20px 50px; align-items: center; }
 .logo { font-weight: 900; font-size: 1.5rem; letter-spacing: 2px; }
 .dot { color: #ffeb3b; text-shadow: 0 0 10px #ffeb3b; }
 .btn-cta { background: #1a1a4b; padding: 10px 25px; border-radius: 50px; text-decoration: none; color: white; border: 1px solid rgba(255,255,255,0.2); }
 
+/* HERO SECTION */
 .hero { text-align: center; padding: 40px 20px 0; }
 
 .profile-container { margin-bottom: 30px; }
@@ -37,6 +39,7 @@ body {
 .hero h1 { font-size: 3rem; font-weight: 900; letter-spacing: -1px; }
 .light { display: block; font-weight: 200; font-size: 2rem; letter-spacing: 12px; }
 
+/* INTRO SECTION */
 .intro-section {
     max-width: 850px;
     margin: 40px auto;
@@ -49,6 +52,7 @@ body {
 .intro-content p { margin-bottom: 25px; font-size: 1.1rem; color: rgba(255, 255, 255, 0.85); }
 .intro-content strong { color: #fff; text-shadow: 0 0 8px rgba(255, 235, 59, 0.6); }
 
+/* HOBBY SECTION & RAINBOW SCROLLBAR */
 .hobby-wrapper { width: 100%; padding-bottom: 60px; }
 .section-title { text-align: center; letter-spacing: 10px; font-weight: 200; margin-bottom: 30px; opacity: 0.7; }
 
@@ -69,7 +73,7 @@ body {
 }
 
 .hobby-card {
-    min-width: 400px;
+    min-width: 400px; /* Adjusted for better visibility of the scrollbar */
     background: rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(20px);
     border-radius: 30px;
@@ -81,6 +85,7 @@ body {
 .hobby-card img { width: 100%; height: 280px; object-fit: cover; pointer-events: none; }
 .card-info { padding: 30px; text-align: center; }
 
+/* ANIMATIONS */
 .slide-up { animation: slideUp 1s ease-out; }
 .delay-1 { animation: slideUp 1s ease-out 0.2s forwards; opacity: 0; }
 .delay-2 { animation: slideUp 1s ease-out 0.4s forwards; opacity: 0; }
