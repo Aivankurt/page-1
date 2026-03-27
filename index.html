@@ -22,47 +22,120 @@
     <main>
         <section class="hero">
             <div class="profile-container slide-up">
-                <div class="avatar-circle">
-                    <img src="profile.ko.jpg" alt="Kurt Animate" class="profile-main">
-                </div>
+                <img src="profile.ko.jpg" alt="Aivan Kurt" class="profile-main">
             </div>
-            <h1 class="slide-up">WHATSUP MGA</h1>
-            <h2 class="light slide-up">KA ARTISTICS!</h2>
+            <h1 class="slide-up">WHATSUP MGA <span class="light">KA ARTISTICS!</span></h1>
         </section>
 
         <section class="intro-section delay-1">
             <div class="intro-content">
-                <p>Meet <strong>Aivan Kurt</strong>—better known as <strong>Kurt Animate</strong>. A young Filipino Businessman and Pinoy Animator who builds the worlds others only dream of.</p>
-                <p>Currently a <strong>Grade 11 ICT student</strong>, Kurt is bridging the gap between complex code and captivating storytelling through pure multimedia artistry.</p>
-                <p>This portfolio is your gateway into the movement. Welcome to the lab.</p>
+                <p>Meet <strong>Aivan Kurt</strong>—better known in the digital world as <strong>Kurt Animate</strong>. A young Filipino Businessman and Pinoy Animator who doesn't just follow trends; he builds the world they live in.</p>
+                
+                <p>Currently navigating the technical landscape as a <strong>Grade 11 ICT student</strong> at SPIST, Kurt's mission is simple: to bridge the gap between complex code and captivating storytelling.</p>
+                
+                <p>As an active Vlogger and Multimedia Artist, his work is a high-speed collision of color and motion. Through his lens, every project becomes a digital narrative.</p>
+                
+                <p>But it's not all business and keyframes. Kurt is a goofy, high-energy individual who values authenticity over everything else, whether he's on the volleyball court or architecting in Minecraft.</p>
+                
+                <p>This portfolio is your gateway into the mind of a creator who is just getting started. Welcome to the movement.</p>
             </div>
         </section>
 
         <div class="hobby-wrapper delay-2">
+            <h2 class="section-title">THE ARTISTIC FEED</h2>
             <div class="hobby-track" id="hobbyTrack">
+                
                 <div class="hobby-card">
                     <img src="https://stillmed.olympics.com/media/Images/OlympicOrg/News/2017/04/11/2017-04-11-Volleyball-thumbnail.jpg" alt="Volleyball">
-                    <div class="card-info"><h3>VOLLEYBALL</h3></div>
+                    <div class="card-info">
+                        <h3>VOLLEYBALL</h3>
+                        <p>Agility meets physics in every serve and spike.</p>
+                    </div>
                 </div>
+
                 <div class="hobby-card">
                     <img src="https://i.etsystatic.com/21790515/r/il/8c99f9/6831854181/il_1140xN.6831854181_g2zi.jpg" alt="Animation">
-                    <div class="card-info"><h3>ANIMATION</h3></div>
+                    <div class="card-info">
+                        <h3>ANIMATION</h3>
+                        <p>Bringing Pinoy-inspired characters to life.</p>
+                    </div>
                 </div>
+
+                <div class="hobby-card">
+                    <img src="https://tse3.mm.bing.net/th/id/OIP._jfOyH780FuWaJy0FWIm7AHaEK?pid=Api&h=220&P=0" alt="Creativity">
+                    <div class="card-info">
+                        <h3>3D WORLDS</h3>
+                        <p>Logic-based design and environmental storytelling.</p>
+                    </div>
+                </div>
+
                 <div class="hobby-card">
                     <img src="https://media.istockphoto.com/id/1344939844/photo/hand-holding-drawing-virtual-lightbulb-with-brain-on-bokeh-background-for-creative-and-smart.jpg?s=612x612&w=0&k=20&c=2GLUy6eqCSr0NFRO8CHm8_PUMy9Qc8ryqcsRoe0DEYM=" alt="Research">
-                    <div class="card-info"><h3>RESEARCH</h3></div>
+                    <div class="card-info">
+                        <h3>RESEARCH & HISTORY</h3>
+                        <p>Analyzing the past to innovate the future of tech.</p>
+                    </div>
                 </div>
+
+                <div class="hobby-card">
+                    <img src="https://images.stockcake.com/public/f/9/c/f9c43716-dbdb-4dc1-a095-89745f5286b2_large/silhouette-singing-performance-stockcake.jpg" alt="Singing">
+                    <div class="card-info">
+                        <h3>SINGING</h3>
+                        <p>Expressing emotion through melody and vocal performance.</p>
+                    </div>
+                </div>
+
+                <div class="hobby-card">
+                    <img src="https://us.images.westend61.de/0001775586j/a-modern-dance-girl-dancer-dancing-in-neon-light-doing-gymnastic-exercises-in-studio-copy-space-HPIF03408.jpg" alt="Dancing">
+                    <div class="card-info">
+                        <h3>DANCING</h3>
+                        <p>Fluid motion and rhythm under the neon lights.</p>
+                    </div>
+                </div>
+
+                <div class="hobby-card">
+                    <img src="https://cdn.britannica.com/07/145407-050-8DBD77E9/belts.jpg" alt="Martial Arts">
+                    <div class="card-info">
+                        <h3>MARTIAL ARTS</h3>
+                        <p>Discipline, strength, and the basics of self-defense.</p>
+                    </div>
+                </div>
+
             </div>
         </div>
     </main>
 
+    <footer class="footer">
+        <p>&copy; 2026 Aivan Kurt S. Ordoñez | Kurt Animate</p>
+    </footer>
+
     <script>
         const slider = document.getElementById('hobbyTrack');
-        let isDown = false; let startX; let scrollLeft;
-        slider.addEventListener('mousedown', (e) => { isDown = true; startX = e.pageX - slider.offsetLeft; scrollLeft = slider.scrollLeft; });
-        slider.addEventListener('mouseleave', () => isDown = false);
-        slider.addEventListener('mouseup', () => isDown = false);
-        slider.addEventListener('mousemove', (e) => { if(!isDown) return; e.preventDefault(); const x = e.pageX - slider.offsetLeft; const walk = (x - startX) * 2; slider.scrollLeft = scrollLeft - walk; });
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        slider.addEventListener('mousedown', (e) => {
+            isDown = true;
+            slider.classList.add('active');
+            startX = e.pageX - slider.offsetLeft;
+            scrollLeft = slider.scrollLeft;
+        });
+        slider.addEventListener('mouseleave', () => {
+            isDown = false;
+            slider.classList.remove('active');
+        });
+        slider.addEventListener('mouseup', () => {
+            isDown = false;
+            slider.classList.remove('active');
+        });
+        slider.addEventListener('mousemove', (e) => {
+            if(!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - slider.offsetLeft;
+            const walk = (x - startX) * 2; 
+            slider.scrollLeft = scrollLeft - walk;
+        });
     </script>
 </body>
 </html>
