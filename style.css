@@ -24,27 +24,20 @@ body {
 /* HERO SECTION */
 .hero { text-align: center; padding: 40px 20px 0; }
 
-/* NEW BIG IMAGE STYLE */
-.profile-container {
-    margin-bottom: 30px;
-}
-
+.profile-container { margin-bottom: 30px; }
 .profile-main {
-    width: 250px; /* BIG SIZE */
+    width: 250px;
     height: 250px;
     object-fit: cover;
     border-radius: 50%;
     border: 5px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 0 30px rgba(255, 235, 59, 0.4); /* YELLOW GLOW */
+    box-shadow: 0 0 30px rgba(255, 235, 59, 0.4);
     transition: transform 0.4s ease;
 }
+.profile-main:hover { transform: scale(1.05); }
 
-.profile-main:hover {
-    transform: scale(1.05);
-}
-
-.hero h1 { font-size: 3.2rem; font-weight: 900; letter-spacing: -1px; }
-.light { display: block; font-weight: 200; font-size: 2.2rem; letter-spacing: 12px; }
+.hero h1 { font-size: 3rem; font-weight: 900; letter-spacing: -1px; }
+.light { display: block; font-weight: 200; font-size: 2rem; letter-spacing: 12px; }
 
 /* INTRO SECTION */
 .intro-section {
@@ -56,17 +49,8 @@ body {
     border-radius: 30px;
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
-
-.intro-content p {
-    margin-bottom: 25px;
-    font-size: 1.1rem;
-    color: rgba(255, 255, 255, 0.85);
-}
-
-.intro-content strong {
-    color: #fff;
-    text-shadow: 0 0 8px rgba(255, 235, 59, 0.6);
-}
+.intro-content p { margin-bottom: 25px; font-size: 1.1rem; color: rgba(255, 255, 255, 0.85); }
+.intro-content strong { color: #fff; text-shadow: 0 0 8px rgba(255, 235, 59, 0.6); }
 
 /* HOBBY SECTION & RAINBOW SCROLLBAR */
 .hobby-wrapper { width: 100%; padding-bottom: 60px; }
@@ -78,17 +62,18 @@ body {
     gap: 30px;
     padding: 20px 50px 40px;
     cursor: grab;
+    scroll-behavior: smooth;
 }
 
 .hobby-track::-webkit-scrollbar { height: 10px; }
-.hobby-track::-webkit-scrollbar-track { background: rgba(255, 255, 255, 0.05); border-radius: 10px; margin: 0 25%; }
+.hobby-track::-webkit-scrollbar-track { background: rgba(255, 255, 255, 0.05); border-radius: 10px; margin: 0 10%; }
 .hobby-track::-webkit-scrollbar-thumb {
     background: linear-gradient(to right, #ff2e63, #08d9d6, #ffeb3b);
     border-radius: 10px;
 }
 
 .hobby-card {
-    min-width: 450px;
+    min-width: 400px; /* Adjusted for better visibility of the scrollbar */
     background: rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(20px);
     border-radius: 30px;
@@ -96,8 +81,8 @@ body {
     overflow: hidden;
     transition: 0.4s;
 }
-.hobby-card:hover { transform: scale(1.02); }
-.hobby-card img { width: 100%; height: 280px; object-fit: cover; }
+.hobby-card:hover { transform: translateY(-10px); background: rgba(255, 255, 255, 0.15); }
+.hobby-card img { width: 100%; height: 280px; object-fit: cover; pointer-events: none; }
 .card-info { padding: 30px; text-align: center; }
 
 /* ANIMATIONS */
